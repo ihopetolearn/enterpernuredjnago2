@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<h1>{{title}} and {{id}} </h1>
+{% for i in data %}
+{% if i.title%}
+<li><a href="/home/{{i.id}}/">{{i.title}}-{{i.content}}</li>
+{% endif%}
+<li>
+{{i}}
+</li>
+    {%endfor%}
+    <p>{{content}} </p>
+{%endblock content%}

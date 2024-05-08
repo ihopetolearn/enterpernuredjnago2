@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if not created %}
+    <div style="margin-top: 50px;">
+      <form action="" method="POST">
+        {% csrf_token %}
+          {{ form.as_p}}
+        <button type="submit" value="createarticle">Create</button>
+      </form>
+    </div>
+    <p>{{ object.content }}</p>
+{% else %}
+<h1> please prced to the admin and check it <a href="/admin/"> go to admin and check it out </a> </h1>
+  {% endif %}
+
+{% endblock %}
